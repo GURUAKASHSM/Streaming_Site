@@ -93,10 +93,11 @@ func main() {
 		c.JSON(http.StatusOK, gin.H{"message": "Video deleted successfully"})
 	})
 
-	port := os.Getenv("PORT")
-	if port == "" {
-		port = "8080" // Default to 8080 if PORT is not set
-	}
+	// port := os.Getenv("PORT")
+	// if port == "" {
+	// 	port = "8080" // Default to 8080 if PORT is not set
+	// }
+	port ;= "8080"
 	log.Fatal(r.Run("0.0.0.0:" + port))
 }
 
